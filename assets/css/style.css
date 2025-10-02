@@ -361,7 +361,6 @@ body {
     outline: none;
 }
 
-/* Estilo da "bolinha" do slider para Chrome, Safari, Edge */
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
@@ -379,7 +378,6 @@ body {
     background: #6aabb8;
 }
 
-/* Estilo da "bolinha" do slider para Firefox */
 .slider::-moz-range-thumb {
     width: 20px;
     height: 20px;
@@ -453,6 +451,7 @@ body {
     font-weight: 600;
     color: var(--dark-text);
     font-family: var(--font-family);
+    transition: color 0.3s ease; /* Adiciona uma transição suave de cor */
 }
 
 .faq-question i {
@@ -479,6 +478,11 @@ body {
 
 .faq-item.active .faq-answer {
     max-height: 200px;
+}
+
+/* NOVA REGRA: Muda a cor do título do FAQ quando ativo */
+.faq-item.active .faq-question span {
+    color: var(--primary-teal);
 }
 
 /* ============================================ */
