@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MindFlow - A Evolução da Gestão para Psicólogos</title>
+    <link rel="icon" type="image/png" href="assets/images/logo_png.png">
 
     <meta name="description" content="MindFlow: Menos burocracia, mais tempo para o que importa. Organize sua agenda, automatize anotações e gerencie prontuários de forma segura e intuitiva.">
     <meta property="og:title" content="MindFlow - A Evolução da Gestão para Psicólogos">
@@ -19,8 +20,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
 
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" type="image/png" href="assets/images/logo_png.png">
+    <link rel="stylesheet" href="assets/css/style.css?v=1.1">
 
     <script src="https://unpkg.com/feather-icons"></script>
 </head>
@@ -29,10 +29,10 @@
     <header class="header">
         <div class="container">
             <nav class="main-nav">
-                <a href="#home"><img src="assets/images/logo_png.png" alt="MindFlow Logo" class="logo"></a>
+                <a href="#"><img src="assets/images/logo_png.png" alt="MindFlow Logo" class="logo"></a>
                 <ul class="nav-links">
                     <li><a href="#solucao">A Solução</a></li>
-                    <li><a href="#paraquem">Indicado Para</a></li>
+                    <li><a href="#paraquem">Para Quem É</a></li>
                     <li><a href="#depoimentos">Depoimentos</a></li>
                     <li><a href="#calculadora">Calculadora</a></li>
                     <li><a href="#faq">FAQ</a></li>
@@ -46,7 +46,7 @@
     </header>
 
     <main>
-        <section id="home" class="hero-section">
+        <section class="hero-section">
             <div class="container hero-content">
                 <div class="hero-text">
                     <span class="tag">Exclusivo para Psicólogos</span>
@@ -265,7 +265,7 @@
 
                 document.getElementById('horas-resultado').innerText = horasMes;
                 document.getElementById('calculator-form').style.display = 'none';
-                document.getElementById('resultado-calculadora').style.display = 'block';
+                document.getElementById('resultado-calculadora').style.display = 'flex'; // Changed to flex
             }
 
             // LÓGICA DO FAQ (ACORDEÃO)
