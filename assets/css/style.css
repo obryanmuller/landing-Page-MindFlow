@@ -192,7 +192,7 @@ body {
     box-shadow: 0 5px 20px rgba(46, 71, 108, 0.05);
     text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 0 10px; /* Espaçamento para o carrossel mobile */
+    margin: 0 10px;
 }
 
 .feature-card:hover {
@@ -361,7 +361,8 @@ body {
     outline: none;
 }
 
-.slider::-webkit-slider-thumb, .slider::-moz-range-thumb {
+/* Estilo da "bolinha" do slider para Chrome, Safari, Edge */
+.slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 20px;
@@ -369,8 +370,29 @@ body {
     background: var(--primary-teal);
     cursor: pointer;
     border-radius: 50%;
-    border: 3px solid var(--background-white);
-    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    border: none;
+    box-shadow: none;
+    transition: background 0.3s ease;
+}
+
+.slider::-webkit-slider-thumb:hover {
+    background: #6aabb8;
+}
+
+/* Estilo da "bolinha" do slider para Firefox */
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: var(--primary-teal);
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    box-shadow: none;
+    transition: background 0.3s ease;
+}
+
+.slider::-moz-range-thumb:hover {
+    background: #6aabb8;
 }
 
 .calculator-container button {
