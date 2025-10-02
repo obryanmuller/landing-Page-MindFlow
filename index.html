@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindFlow - A Evolução da Gestão para Psicólogos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+
+   <header class="header">
+        <div class="container">
+            <nav class="main-nav">
+                <img src="/logo_png.png" alt="MindFlow Logo" class="logo">
+                
+                <ul class="nav-links">
+                    <li><a href="#solucao">A Solução</a></li>
+                    <li><a href="#paraquem">Indicado Para</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#calculadora">Calculadora</a></li>
+                    <li><a href="#cta" class="btn btn-secondary">Começar Agora</a></li>
+                </ul>
+
+                <button class="hamburger-menu">
+                    <i data-feather="menu"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <span class="tag">Exclusivo para Psicólogos</span>
+                    <h1>Menos burocracia, mais tempo para o que importa.</h1>
+                    <p>Organize sua agenda, automatize anotações e gerencie seus prontuários em um único lugar seguro e intuitivo. Recupere o foco total no cuidado com seus pacientes.</p>
+                    <a href="#cta" class="btn btn-primary">Faça um teste grátis por 7 dias</a>
+                </div>
+                <div class="hero-image">
+                    <img src="/dashboard.png" alt="Dashboard do App MindFlow">
+                </div>
+            </div>
+        </section>
+
+        <section id="solucao" class="features-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Sua prática clínica, simplificada e inteligente.</h2>
+                    <p>O MindFlow centraliza as ferramentas que você precisa, com a segurança que seus pacientes merecem.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i data-feather="calendar"></i>
+                        <h3>Agenda Inteligente</h3>
+                        <p>Envio de lembretes automáticos via WhatsApp/SMS e reagendamento simplificado para pacientes.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i data-feather="mic"></i>
+                        <h3>Transcrição com IA</h3>
+                        <p>Gere notas de evolução a partir da transcrição automática das sessões, identificando temas recorrentes.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i data-feather="file-text"></i>
+                        <h3>Prontuário Digital</h3>
+                        <p>Histórico completo, seguro e organizado, com criptografia de ponta a ponta e conformidade com a LGPD.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="paraquem" class="icp-section">
+            <div class="container icp-content">
+                <div class="icp-image">
+                     <img src="/uso_real.png" alt="Psicóloga usando MindFlow">
+                </div>
+                <div class="icp-text">
+                    <h2>Feito para o psicólogo moderno.</h2>
+                    <p>O MindFlow é ideal para profissionais autônomos e pequenos consultórios que valorizam a eficiência e a tecnologia com um toque humano.</p>
+                    <ul>
+                        <li><i data-feather="check-circle"></i><span><strong>Digitalmente Ativos:</strong> Já utilizam ferramentas como Google Agenda e buscam mais integração.</span></li>
+                        <li><i data-feather="check-circle"></i><span><strong>Focados em Eficiência:</strong> Querem economizar tempo em tarefas administrativas para focar nos pacientes.</span></li>
+                        <li><i data-feather="check-circle"></i><span><strong>Preocupados com Segurança:</strong> Exigem conformidade com a LGPD e a confidencialidade dos dados.</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="depoimentos" class="testimonial-section">
+            <div class="container">
+                <div class="testimonial-card">
+                    <img src="/psicologa.png" alt="Dra. Marina Andrade" class="persona-avatar">
+                    <blockquote>
+                        "Eu perdia muito tempo alternando entre planilhas e o WhatsApp. Com o MindFlow, centralizei tudo. Os lembretes automáticos diminuíram as faltas e os resumos de sessão são geniais para preparar o próximo atendimento. Profissionalizou minha gestão."
+                    </blockquote>
+                    <cite>
+                        <strong>Dra. Marina Andrade</strong>
+                        <span>Psicóloga Clínica, Itajubá/MG </span>
+                    </cite>
+                </div>
+            </div>
+        </section>
+
+        <section id="calculadora" class="calculator-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Quantas horas sua burocracia está custando?</h2>
+                    <p>Responda 3 perguntas e descubra o tempo que você pode recuperar todos os meses com o MindFlow.</p>
+                </div>
+                <div class="calculator-container">
+                    <div class="calculator-form" id="calculator-form">
+                        <div class="form-group">
+                            <label for="pacientes">1. Quantos pacientes você atende por semana?</label>
+                            <div class="slider-wrapper">
+                                <span>1</span>
+                                <input type="range" id="pacientes" min="1" max="40" value="15" class="slider">
+                                <span>40</span>
+                            </div>
+                            <b id="pacientes-valor">15 pacientes</b>
+                        </div>
+                        <div class="form-group">
+                            <label for="lembretes">2. Quanto tempo você gasta enviando lembretes e reagendando sessões por semana?</label>
+                             <div class="slider-wrapper">
+                                <span>0 min</span>
+                                <input type="range" id="lembretes" min="0" max="180" value="60" step="10" class="slider">
+                                <span>3 horas</span>
+                            </div>
+                            <b id="lembretes-valor">60 minutos</b>
+                        </div>
+                        <div class="form-group">
+                            <label for="anotacoes">3. Quanto tempo você leva para organizar anotações e prontuários por semana?</label>
+                             <div class="slider-wrapper">
+                                <span>0 min</span>
+                                <input type="range" id="anotacoes" min="0" max="240" value="90" step="10" class="slider">
+                                <span>4 horas</span>
+                            </div>
+                            <b id="anotacoes-valor">90 minutos</b>
+                        </div>
+                        <button class="btn btn-primary" onclick="calcularEconomia()">Calcular minha economia de tempo</button>
+                    </div>
+                    <div class="calculator-result" id="resultado-calculadora" style="display: none;">
+                        <h3>Você pode economizar até</h3>
+                        <div class="horas-resultado" id="horas-resultado">0</div>
+                        <h2>horas por mês!</h2>
+                        <p>Esse é o tempo que você pode dedicar aos seus pacientes, a estudar ou a cuidar de você.</p>
+                        <a href="#cta" class="btn btn-primary">Quero recuperar meu tempo com o MindFlow</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta" class="cta-section">
+            <div class="container">
+                <h2>Pronto para transformar sua prática clínica?</h2>
+                <p>Junte-se a centenas de psicólogos que já estão economizando tempo e aprimorando o cuidado com seus pacientes. Sem compromisso, cancele quando quiser.</p>
+                <form class="cta-form">
+                    <input type="email" placeholder="Digite seu melhor e-mail" required>
+                    <button type="submit" class="btn btn-primary">Iniciar meu teste gratuito</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <img src="/logo_png.png" alt="MindFlow Logo" class="logo-footer">
+            <p>© 2025 MindFlow. Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="#"><i data-feather="linkedin"></i></a>
+                <a href="#"><i data-feather="instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        feather.replace(); // Ativa os ícones
+
+        // LÓGICA DO MENU HAMBÚRGUER
+        const hamburger = document.querySelector('.hamburger-menu');
+        const navMenu = document.querySelector('.nav-links');
+        const navLinks = document.querySelectorAll('.nav-links a'); // Pega todos os links do menu
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Fecha o menu quando um link é clicado
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // LÓGICA DA CALCULADORA DE TEMPO
+        const sliderPacientes = document.getElementById('pacientes');
+        const valorPacientes = document.getElementById('pacientes-valor');
+        const sliderLembretes = document.getElementById('lembretes');
+        const valorLembretes = document.getElementById('lembretes-valor');
+        const sliderAnotacoes = document.getElementById('anotacoes');
+        const valorAnotacoes = document.getElementById('anotacoes-valor');
+        const calculatorForm = document.getElementById('calculator-form');
+        const resultadoCalculadora = document.getElementById('resultado-calculadora');
+
+        // Atualiza os valores em tempo real
+        sliderPacientes.oninput = function() {
+            valorPacientes.innerHTML = this.value + " pacientes";
+        }
+        sliderLembretes.oninput = function() {
+            valorLembretes.innerHTML = this.value + " minutos";
+        }
+        sliderAnotacoes.oninput = function() {
+            valorAnotacoes.innerHTML = this.value + " minutos";
+        }
+
+        function calcularEconomia() {
+            // Assume-se que o MindFlow automatiza 90% das tarefas de lembrete e 70% do tempo de anotação
+            const economiaLembretes = parseInt(sliderLembretes.value) * 0.90;
+            const economiaAnotacoes = parseInt(sliderAnotacoes.value) * 0.70;
+            
+            // O número de pacientes pode influenciar a economia geral de forma mais significativa
+            const bonusPacientes = parseInt(sliderPacientes.value) * 3; // Bônus de 3 min por paciente
+
+            const minutosEconomizadosPorSemana = economiaLembretes + economiaAnotacoes + bonusPacientes;
+            
+            // Converte minutos/semana para horas/mês (1 mês = 4.33 semanas)
+            const horasEconomizadasPorMes = Math.round((minutosEconomizadosPorSemana * 4.33) / 60);
+
+            // Exibe o resultado e esconde o formulário
+            document.getElementById('horas-resultado').innerText = horasEconomizadasPorMes;
+            calculatorForm.style.display = 'none';
+            resultadoCalculadora.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
