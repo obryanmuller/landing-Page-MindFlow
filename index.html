@@ -93,17 +93,63 @@
             </div>
         </section>
 
-        <section id="depoimentos" class="testimonial-section">
+       <section id="depoimentos" class="testimonial-section">
             <div class="container">
-                <div class="testimonial-card">
-                    <img src="assets/images/psicologa.png" alt="Dra. Marina Andrade" class="persona-avatar">
-                    <blockquote>
-                        "Eu perdia muito tempo alternando entre planilhas e o WhatsApp. Com o MindFlow, centralizei tudo. Os lembretes automáticos diminuíram as faltas e os resumos de sessão são geniais para preparar o próximo atendimento. Profissionalizou minha gestão."
-                    </blockquote>
-                    <cite>
-                        <strong>Dra. Marina Andrade</strong>
-                        <span>Psicóloga Clínica, Itajubá/MG </span>
-                    </cite>
+                <div class="testimonial-carousel">
+                    <div class="testimonial-card">
+                        <img src="assets/images/Depoimentos/psicologa.png" alt="Dra. Marina Andrade" class="persona-avatar">
+                        <blockquote>
+                            "Eu perdia muito tempo alternando entre planilhas e o WhatsApp. Com o MindFlow, centralizei tudo. Os lembretes automáticos diminuíram as faltas e os resumos de sessão são geniais para preparar o próximo atendimento. Profissionalizou minha gestão."
+                        </blockquote>
+                        <cite>
+                            <strong>Dra. Marina Andrade</strong>
+                            <span>Psicóloga Clínica, Itajubá/MG </span>
+                        </cite>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <img src="assets/images/Depoimentos/psicologo1.png" alt="Dr. Rafael Costa" class="persona-avatar">
+                        <blockquote>
+                            "A função de transcrição com IA é revolucionária. Ela me ajuda a identificar padrões na fala dos pacientes que antes poderiam passar despercebidos. Otimizou meu tempo de análise e a qualidade das minhas anotações."
+                        </blockquote>
+                        <cite>
+                            <strong>Dr. Rafael Costa</strong>
+                            <span>Psicanalista, São Paulo/SP</span>
+                        </cite>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <img src="assets/images/depoimentos/psicologa2.png" alt="Clara Mendes" class="persona-avatar">
+                        <blockquote>
+                            "Eu era muito resistente a usar um software, mas a segurança e a conformidade com a LGPD do MindFlow me convenceram. A plataforma é intuitiva, e ter os prontuários criptografados me dá a tranquilidade que preciso para focar no essencial: meus pacientes."
+                        </blockquote>
+                        <cite>
+                            <strong>Clara Mendes</strong>
+                            <span>Psicóloga Cognitivo-Comportamental, Belo Horizonte/BH</span>
+                        </cite>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <img src="assets/images/Depoimentos/psicologo2.png" alt="João Pedro Martins" class="persona-avatar">
+                        <blockquote>
+                            "O maior benefício para mim foi a redução de 'no-shows'. Os lembretes automáticos via WhatsApp são discretos e eficazes. Meus pacientes adoraram, e minha agenda nunca esteve tão organizada. Recomendo a todos os colegas."
+                        </blockquote>
+                        <cite>
+                            <strong>João Pedro Martins</strong>
+                            <span>Psicólogo Humanista, Curitiba/PR</span>
+                        </cite>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <img src="assets/images/Depoimentos/psicologa3.png" alt="Beatriz Lima" class="persona-avatar">
+                        <blockquote>
+                            "Gerenciar os pagamentos e agendamentos era um pesadelo. Com o MindFlow, tudo ficou centralizado. A interface é limpa e fácil de usar, mesmo para quem não tem muita afinidade com tecnologia. Liberou minha mente para o trabalho clínico."
+                        </blockquote>
+                        <cite>
+                            <strong>Beatriz Lima</strong>
+                            <span>Terapeuta de Casal, Rio de Janeiro/RJ</span>
+                        </cite>
+                    </div>
                 </div>
             </div>
         </section>
@@ -255,6 +301,18 @@
                 }
             }
         }
+
+        // LÓGICA DO CARROSSEL DE DEPOIMENTOS
+        $('.testimonial-carousel').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true,
+            infinite: true,
+            autoplay: true,
+            autoplaySpeed: 5000, // Passa a cada 5 segundos
+            adaptiveHeight: true
+        });
 
         // Executa a função quando a página carrega
         $(document).ready(setupCarousel);

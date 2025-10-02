@@ -264,13 +264,14 @@
         .testimonial-card {
             background: var(--background-white);
             color: var(--dark-text);
-            max-width: 700px;
-            margin: 0 auto;
             padding: 40px;
             border-radius: 15px;
             position: relative;
             box-shadow: 0 10px 30px rgba(46, 71, 108, 0.1);
             border-top: 4px solid var(--primary-teal);
+            margin-left: 5px;
+            margin-right: 5px;
+            margin-top: 50px; /* <-- ADICIONE ESTA LINHA */
         }
         .persona-avatar {
             width: 80px;
@@ -625,3 +626,24 @@
         .feature-card {
             margin: 0 15px; /* Add some margin for spacing between slides */
         }
+        /* Adicione esta nova regra no seu CSS. Pode ser perto da seção de depoimentos */
+.testimonial-carousel {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Modifique sua regra .testimonial-card existente para que fique assim: */
+.testimonial-card {
+    background: var(--background-white);
+    color: var(--dark-text);
+    /* max-width: 700px; <-- REMOVIDO */
+    /* margin: 0 auto; <-- REMOVIDO */
+    padding: 40px;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(46, 71, 108, 0.1);
+    border-top: 4px solid var(--primary-teal);
+    /* Adicionamos uma pequena margem para garantir o espaçamento dentro do carrossel */
+    margin-left: 5px;
+    margin-right: 5px;
+}
