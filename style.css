@@ -611,3 +611,17 @@
                 font-size: 1.1em;
             }
         }
+
+        /* Slick Carousel Custom Styles */
+        .slick-dots li button:before {
+            font-size: 10px;
+            color: var(--primary-blue);
+        }
+
+        .slick-dots li.slick-active button:before {
+            color: var(--primary-teal);
+        }
+
+        .feature-card {
+            margin: 0 15px; /* Add some margin for spacing between slides */
+        }

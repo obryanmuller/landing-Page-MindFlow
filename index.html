@@ -8,6 +8,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+
     <script src="https://unpkg.com/feather-icons"></script>
 </head>
 <body>
@@ -176,19 +179,20 @@
         </div>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script>
         feather.replace(); // Ativa os ícones
 
         // LÓGICA DO MENU HAMBÚRGUER
         const hamburger = document.querySelector('.hamburger-menu');
         const navMenu = document.querySelector('.nav-links');
-        const navLinks = document.querySelectorAll('.nav-links a'); // Pega todos os links do menu
+        const navLinks = document.querySelectorAll('.nav-links a');
 
         hamburger.addEventListener('click', () => {
             navMenu.classList.toggle('active');
         });
 
-        // Fecha o menu quando um link é clicado
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
@@ -205,7 +209,6 @@
         const calculatorForm = document.getElementById('calculator-form');
         const resultadoCalculadora = document.getElementById('resultado-calculadora');
 
-        // Atualiza os valores em tempo real
         sliderPacientes.oninput = function() {
             valorPacientes.innerHTML = this.value + " pacientes";
         }
@@ -217,23 +220,47 @@
         }
 
         function calcularEconomia() {
-            // Assume-se que o MindFlow automatiza 90% das tarefas de lembrete e 70% do tempo de anotação
             const economiaLembretes = parseInt(sliderLembretes.value) * 0.90;
             const economiaAnotacoes = parseInt(sliderAnotacoes.value) * 0.70;
-            
-            // O número de pacientes pode influenciar a economia geral de forma mais significativa
-            const bonusPacientes = parseInt(sliderPacientes.value) * 3; // Bônus de 3 min por paciente
-
+            const bonusPacientes = parseInt(sliderPacientes.value) * 3;
             const minutosEconomizadosPorSemana = economiaLembretes + economiaAnotacoes + bonusPacientes;
-            
-            // Converte minutos/semana para horas/mês (1 mês = 4.33 semanas)
             const horasEconomizadasPorMes = Math.round((minutosEconomizadosPorSemana * 4.33) / 60);
 
-            // Exibe o resultado e esconde o formulário
             document.getElementById('horas-resultado').innerText = horasEconomizadasPorMes;
             calculatorForm.style.display = 'none';
             resultadoCalculadora.style.display = 'block';
         }
+
+        // LÓGICA DO CARROSSEL PARA CELULAR
+        function setupCarousel() {
+            const featuresGrid = $('.features-grid');
+            // Usamos 576px como o ponto de quebra para celulares
+            if ($(window).width() < 577) {
+                // Verifica se o carrossel já não foi iniciado
+                if (!featuresGrid.hasClass('slick-initialized')) {
+                    featuresGrid.slick({
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        arrows: false,
+                        dots: true,
+                        infinite: true,
+                        autoplay: true,
+                        autoplaySpeed: 3000,
+                    });
+                }
+            } else {
+                // Se a tela for maior e o carrossel estiver ativo, ele é destruído
+                if (featuresGrid.hasClass('slick-initialized')) {
+                    featuresGrid.slick('unslick');
+                }
+            }
+        }
+
+        // Executa a função quando a página carrega
+        $(document).ready(setupCarousel);
+
+        // Executa a função toda vez que a janela é redimensionada
+        $(window).on('resize', setupCarousel);
     </script>
 </body>
 </html>
